@@ -1,0 +1,26 @@
+\documentclass[11pt,a4paper]{article}
+
+\begin{document}
+
+This module works like this:
+
+\begin{code}
+==> Define some functions.
+==> Export the functions.
+\end{code}
+
+Our function \texttt{myFunction} is used to add two to any input.
+
+\begin{code}[name=Define some functions]
+function myFunction(input) {
+  return input + 2;
+}
+\end{code}
+
+Now that all the functions are written, they must be exported.
+
+\begin{code}[name=Export the functions]
+export { myFunction };
+\end{code}
+
+\end{document}

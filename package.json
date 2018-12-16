@@ -1,0 +1,30 @@
+{
+  "name": "outline-loader",
+  "version": "1.0.0",
+  "description": "A loader to pass files through Outline (Literate programming tool)",
+  "main": "src/loader.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oinkiguana/outline-loader.git"
+  },
+  "author": "Cameron Eldridge",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oinkiguana/outline-loader/issues"
+  },
+  "homepage": "https://github.com/oinkiguana/outline-loader#readme",
+  "dependencies": {
+    "loader-utils": "^1.1.0",
+    "schema-utils": "^1.0.0"
+  },
+  "devDependencies": {
+    "babel-jest": "^23.6.0",
+    "babel-preset-env": "^1.7.0",
+    "jest": "^23.6.0",
+    "memory-fs": "^0.4.1",
+    "webpack": "^4.27.1"
+  }
+}
