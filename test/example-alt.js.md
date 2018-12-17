@@ -1,0 +1,11 @@
+Here's some JavaScript:
+
+~~~
+==> First block.
+~~~
+
+Here's the code:
+
+~~~ (First block)
+console.log('Hello world');
+~~~

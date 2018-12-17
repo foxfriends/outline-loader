@@ -16,6 +16,53 @@ const schema = {
   additionalProperties: false,
 };
 
+const commonOpts = [
+  'comment_start',
+  'interpolation_start',
+  'interpolation_end',
+  'macro_start',
+  'macro_end',
+]
+
+const mdOpts = [
+  'fence_sequence',
+  'block_name_start',
+  'block_name_end',
+  'comments_as_aside',
+  'default_language',
+  ...commonOpts,
+];
+
+const htmlOpts = [
+  'code_tag',
+  'language_attribute',
+  'name_attribute',
+  'block_class',
+  'language_class',
+  'comments_as_aside',
+  'default_language',
+  ...commonOpts,
+];
+
+const texOpts = [
+  'code_environment',
+  'default_language',
+  ...commonOpts,
+];
+
+const birdOpts = [
+  'code_marker',
+  'code_name_marker',
+  ...commonOpts,
+];
+
+const opts = {
+  md: mdOpts,
+  tex: texOpts,
+  html: htmlOpts,
+  bird: birdOpts,
+};
+
 function resolveStyle(...styles) {
   const validStyle = style => (['md', 'tex', 'bird', 'html'].includes(style) ? style : null);
   return styles.reduce((r, style) => r || validStyle(style), null);
@@ -63,6 +110,12 @@ export default function loader(source) {
         default:
           return callback(Error(`Unsupported style ${style}`));
       }
+      Object
+        .entries(config[style] || {})
+        .filter(([key]) => opts[style].includes(key))
+        .forEach(([key, value]) => {
+          parser = parser[`set_${key}`](value);
+        });
       callback(null, parser.tangle(source, options.entrypoint || null, language));
     });
   } catch (error) {
