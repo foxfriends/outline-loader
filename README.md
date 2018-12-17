@@ -4,13 +4,10 @@
 
 A Webpack loader that works with [Outline][] to compile literate JavaScript.
 
-Note that to use this loader requires that you have installed Outline, and it is available on your
-path. See the [Outline][] documentation for installation instructions.
-
 ## Installation
 
 ```bash
-npm install --save-dev outline-loader
+npm install --save-dev @oinkiguana/outline-loader
 ```
 
 ## Options

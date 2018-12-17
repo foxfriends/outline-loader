@@ -1,10 +1,11 @@
 {
-  "name": "outline-loader",
+  "name": "@oinkiguana/outline-loader",
   "version": "1.0.0",
   "description": "A loader to pass files through Outline (Literate programming tool)",
-  "main": "src/loader.js",
+  "main": "dist/loader.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -17,14 +18,20 @@
   },
   "homepage": "https://github.com/oinkiguana/outline-loader#readme",
   "dependencies": {
+    "@oinkiguana/outline": "^0.1.0",
     "loader-utils": "^1.1.0",
-    "schema-utils": "^1.0.0"
+    "schema-utils": "^1.0.0",
+    "toml": "^2.3.3"
   },
   "devDependencies": {
     "babel-jest": "^23.6.0",
     "babel-preset-env": "^1.7.0",
     "jest": "^23.6.0",
     "memory-fs": "^0.4.1",
-    "webpack": "^4.27.1"
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

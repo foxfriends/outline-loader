@@ -1,5 +1,6 @@
 const path = require('path');
 module.exports = {
+  mode: 'development',
   entry: './index.js',
   output: {
     path: path.resolve('output'),
@@ -7,7 +8,7 @@ module.exports = {
   },
   module: {
     rules: [
-      { test: /\.js\.(tex|md|html|bird)$/, loader: 'outline-loader' },
+      { test: /\.js\.(tex|md|html|bird)$/, loader: '@oinkiguana/outline-loader' },
     ],
   },
 };

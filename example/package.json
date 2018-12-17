@@ -1,15 +1,16 @@
 {
   "name": "example",
   "version": "1.0.0",
-  "description": "",
+  "description": "Example project using outline loader",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack"
   },
-  "author": "",
+  "author": "Cameron Eldridge",
   "license": "ISC",
   "devDependencies": {
-    "outline-loader": "file:../../outline-loader",
+    "@oinkiguana/outline-loader": "file:../",
+    "webpack": "^4.27.1",
     "webpack-cli": "^3.1.2"
   }
 }
