@@ -9,7 +9,7 @@
   "author": "Cameron Eldridge",
   "license": "ISC",
   "devDependencies": {
-    "@oinkiguana/outline-loader": "file:../",
+    "@oinkiguana/outline-loader": "file:..",
     "webpack": "^4.27.1",
     "webpack-cli": "^3.1.2"
   }
