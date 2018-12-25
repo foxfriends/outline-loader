@@ -12,6 +12,7 @@ const schema = {
     style: { type: 'string' },
     language: { type: 'string' },
     entrypoint: { type: 'string' },
+    output: { type: 'string' },
   },
   additionalProperties: false,
 };
@@ -116,7 +117,11 @@ export default function loader(source) {
         .forEach(([key, value]) => {
           parser = parser[`set_${key}`](value);
         });
-      callback(null, parser.tangle(source, options.entrypoint || null, language));
+      if (options.output === 'weave') {
+        callback(null, parser.weave(source));
+      } else {
+        callback(null, parser.tangle(source, options.entrypoint || null, language));
+      }
     });
   } catch (error) {
     callback(error);

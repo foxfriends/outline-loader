@@ -16,6 +16,8 @@ npm install --save-dev @oinkiguana/outline-loader
 *   `style`: Passed to Outline's `-s` parameter to override the automatically detected style
 *   `config`: Passed to Outline's `-c` parameter to specify the path to the `Outline.toml` file
 *   `entrypoint`: Passed to Outline's `-e` parameter to choose a named entrypoint
+*   `output`: Can be set to `tangle` or `weave`, to indicate whether to tangle the source (output
+    code) or weave it (output documentation)
 
 ## Example usage:
 

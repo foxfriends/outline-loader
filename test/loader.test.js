@@ -28,4 +28,10 @@ test('Can read in a config file', async () => {
   const stats = await compiler('example-alt.js.md', { config: './test/Config.toml' });
   const output = stats.toJson().modules[0].source;
   expect(output).toBe(`console.log('Hello world');`);
-})
+});
+
+test('Can output weaved documentation', async () => {
+  const stats = await compiler('example.js.md', { output: 'weave' });
+  const output = stats.toJson().modules[0].source;
+  expect(output).not.toBe(`console.log('Hello world');`);
+});
