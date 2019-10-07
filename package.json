@@ -1,6 +1,6 @@
 {
   "name": "@oinkiguana/outline-loader",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A loader to pass files through Outline (Literate programming tool)",
   "main": "dist/loader.js",
   "scripts": {
