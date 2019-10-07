@@ -1,4 +1,4 @@
-[Outline]: https://github.com/oinkiguana/outline
+[Outline]: https://github.comfoxfriendsoinkiguana/outline
 
 # Outline Loader
 

@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/oinkiguana/outline-loader.git"
+    "url": "git+https://github.com/foxfriends/outline-loader.git"
   },
   "author": "Cameron Eldridge",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/oinkiguana/outline-loader/issues"
+    "url": "https://github.com/foxfriends/outline-loader/issues"
   },
-  "homepage": "https://github.com/oinkiguana/outline-loader#readme",
+  "homepage": "https://github.com/foxfriends/outline-loader#readme",
   "dependencies": {
     "@oinkiguana/outline": "^0.1.2",
     "loader-utils": "^1.1.0",
