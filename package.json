@@ -19,7 +19,7 @@
   "homepage": "https://github.com/foxfriends/outline-loader#readme",
   "dependencies": {
     "@oinkiguana/outline": "^0.1.2",
-    "loader-utils": "^1.1.0",
+    "loader-utils": "^1.4.2",
     "schema-utils": "^1.0.0",
     "toml": "^2.3.3"
   },
